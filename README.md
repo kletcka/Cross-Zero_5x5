@@ -1,7 +1,5 @@
-# Cross-Zero_5x5
-
-<картинка>
-
+# Cross-Zero_5x5  
+![Крестик](https://avatars.mds.yandex.net/get-pdb/2714303/2e63bedf-ff9d-4a57-ae70-4f06b988e88b/s1200)  
 ## Как играть
   
 Игра:  
@@ -27,6 +25,7 @@ liste  - dict; алгоритмы для счета у окольных квад
 which - boolean; какой игрок ходит  
 answers - list; все варианты окончания игры  
 ans - boolean; вывод в игре    
+mode - boolean; меню/игра  
   
 ## objects.py    
 ### Классы:    

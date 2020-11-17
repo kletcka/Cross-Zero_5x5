@@ -60,7 +60,7 @@ check()
 draw(screen)      
 *screen* - ?; экран, где рисовать изображение    
      
-## objects.json     
+## settings.json     
 set_numbers_of_cells - сколько клеток  
 set_width_of_cells - размеры клеток       
 texts - тексты    

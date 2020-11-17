@@ -1,0 +1,22 @@
+{
+    "set_numbers_of_cells": 6,
+    "set_width_of_cells": 50,
+    "texts": {
+        "x_wins": "Крестики выиграли!",
+        "o_wins": "Нолики выиграли!",
+        "no_wins": "Ничья",
+        "new": "Нажмите пробел"
+    },
+    "colors": {
+        "back_color": {
+            "r": 0,
+            "g": 0,
+            "b": 0
+        },
+        "text_color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+        }
+    }
+}

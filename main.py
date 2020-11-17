@@ -1,9 +1,9 @@
 import random
-import objects
-
+import time
 import json
 import pygame
-import time
+import objects
+
 pygame.init()
 
 settings = dict()

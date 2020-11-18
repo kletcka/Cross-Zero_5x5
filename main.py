@@ -119,15 +119,15 @@ while not done:
         for i in list_of_f:
             list_of_f[i].draw(screen)
 
-        liza = True
+        flag = True
         for i in list(list_of_f.values()):
             a = i.check()
             if i.stage == None:
-                liza = False
+                flag = False
             if a != None:
                 ans = a
                 mode = False
-        if liza == True:
+        if flag == True:
             mode = False
     elif mode == False:
         for i in pygame.event.get():

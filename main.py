@@ -15,13 +15,16 @@ HM = int(settings['set_numbers_of_cells'])
 WI = int(settings['set_width_of_cells'])
 WIDTH = HM*WI
 HEIGHT = HM*WI
-BACKFILL = (settings['colors']['back_color']['r'], settings['colors']
-            ['back_color']['g'], settings['colors']['back_color']['b'])
-TEXTFILL = (settings['colors']['text_color']['r'], settings['colors']
-            ['text_color']['g'], settings['colors']['text_color']['b'])
+BACKFILL = (settings['colors']['back_color']['r'],
+            settings['colors']['back_color']['g'],
+            settings['colors']['back_color']['b'])
+TEXTFILL = (settings['colors']['text_color']['r'],
+            settings['colors']['text_color']['g'],
+            settings['colors']['text_color']['b'])
 NEXTN = settings['texts']['new']
-ANSWERS = {True: settings['texts']['x_wins'], False:  settings['texts']
-           ['o_wins'], None:  settings['texts']['no_wins']}
+ANSWERS = {True: settings['texts']['x_wins'],
+           False:  settings['texts']['o_wins'],
+           None:  settings['texts']['no_wins']}
 
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))

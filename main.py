@@ -12,39 +12,40 @@ with open('settings.json', 'r', encoding='utf-8') as read_file:
     settings = json.load(read_file)
 
 HM = int(settings['set_numbers_of_cells'])
-WI =  int(settings['set_width_of_cells'])
+WI = int(settings['set_width_of_cells'])
 WIDTH = HM*WI
 HEIGHT = HM*WI
-BACKFILL = (settings['colors']['back_color']['r'], settings['colors']['back_color']['g'], settings['colors']['back_color']['b'])
-TEXTFILL = (settings['colors']['text_color']['r'], settings['colors']['text_color']['g'], settings['colors']['text_color']['b'])
+BACKFILL = (settings['colors']['back_color']['r'], settings['colors']
+            ['back_color']['g'], settings['colors']['back_color']['b'])
+TEXTFILL = (settings['colors']['text_color']['r'], settings['colors']
+            ['text_color']['g'], settings['colors']['text_color']['b'])
 NEXTN = settings['texts']['new']
-ANSWERS = {True: settings['texts']['x_wins'], False:  settings['texts']['o_wins'], None:  settings['texts']['no_wins']}
+ANSWERS = {True: settings['texts']['x_wins'], False:  settings['texts']
+           ['o_wins'], None:  settings['texts']['no_wins']}
 
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
 
-
 liste = {'lu': ('l', 2),
-    'ld': ('l', 1),
-    'ru': ('r', 2),
-    'rd': ('r', 1),
-    'u': ('v', 2),
-    'd': ('v', 1),
-    'l': ('g', 2),
-    'r': ('g', 1),
+         'ld': ('l', 1),
+         'ru': ('r', 2),
+         'rd': ('r', 1),
+         'u': ('v', 2),
+         'd': ('v', 1),
+         'l': ('g', 2),
+         'r': ('g', 1),
 
-    'lu1': ('l', 3),
-    'ld1': ('l', 0),
-    'ru1': ('r', 3),
-    'rd1': ('r', 0),
-    'u1': ('v', 3),
-    'd1': ('v', 0),
-    'l1': ('g', 3),
-    'r1': ('g', 0),
-        }
-
+         'lu1': ('l', 3),
+         'ld1': ('l', 0),
+         'ru1': ('r', 3),
+         'rd1': ('r', 0),
+         'u1': ('v', 3),
+         'd1': ('v', 0),
+         'l1': ('g', 3),
+         'r1': ('g', 0),
+         }
 
 
 done = False
@@ -61,6 +62,7 @@ def reset():
         for j in range(0, HM):
             list_of_f[i, j] = objects.Field(i*WI, j*WI, WI)
 
+
 reset()
 
 while not done:
@@ -75,7 +77,8 @@ while not done:
                 for i in list_of_f:
                     if list_of_f[i].rect.collidepoint(pos) and list_of_f[i].stage == None:
                         list_of_f[i].change(which)
-                        pos = (list_of_f[i].x//(WIDTH//HM), list_of_f[i].y//(HEIGHT//HM))
+                        pos = (list_of_f[i].x//(WIDTH//HM),
+                               list_of_f[i].y//(HEIGHT//HM))
                         l = {}
                         l['lu'] = (pos[0]-1, pos[1]-1)
                         l['ld'] = (pos[0]+1, pos[1]+1)
@@ -135,7 +138,7 @@ while not done:
                 done = True
             if pygame.key.get_pressed()[pygame.K_SPACE]:
                 mode = True
-                list_of_f = {} 
+                list_of_f = {}
                 reset()
                 which = True
                 ans = None
